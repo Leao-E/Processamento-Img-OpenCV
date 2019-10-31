@@ -6,6 +6,9 @@ public class Imagem {
 	private List <Float> atributos;
 	private String rotulo;
 	
+	public void setAtributos(List<Float> atributos) {
+		this.atributos = atributos;
+	}
 	public void addAtributo(float atributo) {
 		this.atributos.add(atributo);
 	}
@@ -15,8 +18,11 @@ public class Imagem {
 	public float getAtributo(int index) {
 		return this.atributos.get(index);
 	}
+	public List<Float> getAtributos() {
+		return this.atributos;
+	}
 	public String getRotulo() {
-		return rotulo;
+		return this.rotulo;
 	}
 	public void setRotulo(String rotulo) {
 		this.rotulo = rotulo;

@@ -1,24 +1,15 @@
 package model;
 
-import java.util.List;
+import java.util.ArrayList;
 import model.Imagem;
 
 public class Dataset {
-	private List <Imagem> instancias;
+	private ArrayList <Imagem> imagens;
 	
-	public List<Imagem> getInstancias() {
-		return this.instancias;
+	public ArrayList<Imagem> getImagens() {
+		return this.imagens;
 	}
-	public void setInstancias(List<Imagem> instancias) {
-		this.instancias = instancias;
-	}
-	public void addInstancia(Imagem instancias) {
-		this.instancias.add(instancias);
-	}
-	public Imagem getInstancia() {
-		return this.instancias.get(this.instancias.size()-1);
-	}
-	public Imagem getInstancia(int index) {
-		return this.instancias.get(index);
+	public void setImagens(ArrayList<Imagem> imagens) {
+		this.imagens = imagens;
 	}
 }

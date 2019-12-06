@@ -11,16 +11,16 @@ import java.util.ArrayList;
 
 public class ControleImagem {
 	//carrega imagem do sistema e já seta os atributos da imagem
-	public ArrayList<Float> carregarAtributos (String caminhoParaImagem) {
+	public static ArrayList<Float> carregarAtributos (String caminhoParaImagem) {
 		Mat imagem = new Mat();
 		ArrayList<Float> atributos = new ArrayList<Float>();
 		imagem = Imgcodecs.imread(caminhoParaImagem, Imgcodecs.IMREAD_GRAYSCALE);
 		Imgproc.resize(imagem, imagem, new Size(64,128), 0.5, 0.5, Imgproc.INTER_LINEAR);
-		atributos.addAll(this.calculaHOG(imagem));
+		atributos.addAll(ControleImagem.calculaHOG(imagem));
 		return atributos;
 	}
 	//Calcula o hog a partir de uma imagem Mat passada 
-	private List<Float> calculaHOG (Mat imagem){
+	private static List<Float> calculaHOG (Mat imagem){
 		HOGDescriptor hog = new HOGDescriptor();
 		MatOfFloat atributos = new MatOfFloat();
 		hog.compute(imagem, atributos);

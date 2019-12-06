@@ -1,7 +1,7 @@
 package model;
 
+
 import java.util.ArrayList;
-import model.Imagem;
 
 public class Dataset {
 	private ArrayList <Imagem> imagens;
@@ -11,5 +11,9 @@ public class Dataset {
 	}
 	public void setImagens(ArrayList<Imagem> imagens) {
 		this.imagens = imagens;
+	}
+	@Override
+	public String toString() {
+		return this.getImagens().toString();
 	}
 }

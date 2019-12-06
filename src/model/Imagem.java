@@ -23,4 +23,8 @@ public class Imagem {
 	public void setRotulo(String rotulo) {
 		this.rotulo = rotulo;
 	}
+	@Override
+	public String toString() {
+		return "<Rotulo: "+this.getRotulo()+", Atributos: "+this.getAtributos().toString();
+	}
 }
